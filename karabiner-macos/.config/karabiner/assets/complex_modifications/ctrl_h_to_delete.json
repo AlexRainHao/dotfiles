@@ -1,0 +1,20 @@
+{
+  "title": "ctrl+h to DELETE",
+  "rules": [
+    {
+      "description": "ctrl+h to DELETE",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [{ "key_code": "delete_or_backspace" }]
+        }
+      ]
+    }
+  ]
+}

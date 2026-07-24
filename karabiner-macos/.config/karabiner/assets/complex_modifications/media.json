@@ -1,0 +1,32 @@
+{
+  "title": "fn +m/n media",
+  "rules": [
+    {
+      "description": "Map Fn (Control) + N/M to Previous/Next Track",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "keypad_plus"
+          },
+          "to": [
+            {
+              "consumer_key_code": "rewind"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "keypad_hyphen"
+          },
+          "to": [
+            {
+              "consumer_key_code": "fast_forward"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

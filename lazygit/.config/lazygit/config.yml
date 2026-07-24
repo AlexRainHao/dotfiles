@@ -1,0 +1,23 @@
+gui:
+  sidePanelWidth: 0.2 # gives you more space to show things side-by-side
+  splitDiff: "always"
+  theme:
+    selectedLineBgColor:
+      - reverse
+os:
+  editCommand: "nvim"
+git:
+  paging:
+    colorArg: never
+    pager: ydiff -p cat -s --wrap --width={{columnWidth}}
+customCommands:
+  #- key: "<c-p>"
+  #context: "global"
+  #loadingText: "pushing"
+  #prompts:
+  #- type: "input"
+  #title: "which branch do you want to push to?"
+  #command: "git push origin {{index .PromptResponses 0}}"
+  - key: "F"
+    context: "remotes"
+    command: "git fetch --all --prune"

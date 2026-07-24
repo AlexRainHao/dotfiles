@@ -1,0 +1,35 @@
+{
+  "title": "esc and enter with ctrl",
+  "rules": [
+    {
+      "description": "ctrl+[ to ESC",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [{ "key_code": "escape" }]
+        }
+      ]
+    },
+    {
+      "description": "ctrl+M to Enter",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [{ "key_code": "return_or_enter" }]
+        }
+      ]
+    }
+  ]
+}
