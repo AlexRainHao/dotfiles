@@ -25,7 +25,7 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
     output   = "",
-    mode     = "preferred",
+    mode     = "2560x1440@60",
     position = "auto",
     scale    = "auto",
 })
@@ -58,6 +58,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("waybar")
   hl.exec_cmd("blueman-applet && nm-applet")
   hl.exec_cmd("hypridle")
+  hl.exec_cmd("hyprpaper")
   -- hl.exec_cmd("nm-applet")
   -- hl.exec_cmd("waybar & hyprpaper & firefox")
 end)
@@ -125,7 +126,7 @@ hl.config({
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
-        inactive_opacity = 0.85,
+        inactive_opacity = 0.75,
 
         shadow = {
             enabled      = true,
