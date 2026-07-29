@@ -124,6 +124,7 @@ M.config = {
         'vue_ls',
         'gopls',
         'rust_analyzer',
+        'fish-lsp',
       },
       automatic_enable = true,
     },

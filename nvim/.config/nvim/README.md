@@ -10,9 +10,13 @@ guarantee the following libs installed
 - git, make, cmake, gcc
 - lua, luarocks
 - sqlite
-- python, python-pip, python-pynvim
-- fd, fzf, bat, lazygit, unzip, curl, wget, yazi, clippy
-- go, rust, rust-analyzer, nodejs, npm 
+- python, python-pip
+  - `neovim`, `pynvim`
+- fd, fzf, bat, rg, lazygit, unzip, curl, wget, yazi
+- go
+- rust, rust-analyzer, clippy
+- nodejs, npm, pnpm
+- marksman
 
 and use `luarocks` to install following pkgs
 
