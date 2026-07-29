@@ -6,6 +6,7 @@ Just my personal on using neovim workflow configuration.
 
 guarantee the following libs installed
 
+- tree-sitter, tree-sitter-cli
 - base-devel
 - git, make, cmake, gcc
 - lua, luarocks
