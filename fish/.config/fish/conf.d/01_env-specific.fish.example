@@ -1,0 +1,30 @@
+# ======================================== 
+# The mainly entrypoint of code repository
+# set -gx CODE_HOME /tmp/code
+
+# ========================================
+# Java homes vary by operating system and package manager.
+# Intel macOS with Homebrew:
+# set -gx JAVA_HOME "/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home"
+#
+# Apple Silicon macOS with Homebrew:
+# set -gx JAVA_HOME "/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home"
+#
+# Arch Linux:
+# set -gx JAVA_HOME "/usr/lib/jvm/java-21-openjdk"
+
+# ========================================
+# Android SDK locations vary by operating system and installation method.
+# macOS with Android Studio:
+# set -gx ANDROID_HOME "$HOME/Library/Android/sdk"
+#
+# Linux with Android Studio:
+# set -gx ANDROID_HOME "$HOME/Android/Sdk"
+#
+# Arch Linux with a system or AUR SDK package:
+# set -gx ANDROID_HOME "/opt/android-sdk"
+#
+# ========================================
+# optional others
+# set -gx SPECIFIC_BISON_HOME "/usr/local/opt/bison"
+# set -gx SPECIFIC_LIBPQ_HOME "/usr/local/opt/libpq"
