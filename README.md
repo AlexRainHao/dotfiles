@@ -25,6 +25,7 @@
   - [fd](https://github.com/sharkdp/fd)
   - [rg](https://github.com/burntsushi/ripgrep)
   - [jq](https://github.com/jqlang/jq)
+  - [ig](https://github.com/konradsz/igrep)
   - [bat](https://github.com/sharkdp/bat)
   - [yazi](https://github.com/sxyazi/yazi)
 - languages
