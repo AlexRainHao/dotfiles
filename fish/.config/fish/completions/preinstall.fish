@@ -24,3 +24,8 @@ complete --command preinstall \
     --condition __fish_use_subcommand \
     --arguments fvm \
     --description "Install Flutter Version Management"
+
+complete --command preinstall \
+    --condition __fish_use_subcommand \
+    --arguments fnm \
+    --description "Install Fast Node Manager"

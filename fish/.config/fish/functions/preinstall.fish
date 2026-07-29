@@ -1,7 +1,7 @@
 function preinstall --description 'Initialize machine prerequisites'
     if test (count $argv) -ne 1
         echo 'Usage: preinstall <command>' >&2
-        echo 'Commands: tpm, jetbra, uv, rust, fvm' >&2
+        echo 'Commands: tpm, jetbra, uv, rust, fvm, fnm' >&2
         return 2
     end
 
@@ -24,6 +24,10 @@ function preinstall --description 'Initialize machine prerequisites'
 
         case fvm
             __preinstall_fvm
+            return $status
+
+        case fnm
+            __preinstall_fnm
             return $status
 
         case '*'
@@ -213,4 +217,40 @@ function __preinstall_fvm --description 'Install Flutter Version Management'
     end
 
     echo "preinstall: FVM is ready at $fvm_bin"
+end
+
+function __preinstall_fnm --description 'Install Fast Node Manager'
+    set -l fnm_env "$HOME/.config/fish/conf.d/00_fnm.fish"
+
+    if test -f "$fnm_env"
+        source "$fnm_env"
+    end
+
+    if command -q fnm
+        echo "preinstall: fnm already exists at "(command -s fnm)"; skipping"
+        return 0
+    end
+
+    command curl -fsSL https://fnm.vercel.app/install |
+        command bash -s -- --skip-shell
+    set -l install_status $pipestatus
+
+    if test $install_status[1] -ne 0
+        return $install_status[1]
+    end
+
+    if test $install_status[2] -ne 0
+        return $install_status[2]
+    end
+
+    if test -f "$fnm_env"
+        source "$fnm_env"
+    end
+
+    if not command -q fnm
+        echo 'preinstall: fnm executable was not found after installation' >&2
+        return 1
+    end
+
+    echo "preinstall: fnm is ready at "(command -s fnm)
 end
