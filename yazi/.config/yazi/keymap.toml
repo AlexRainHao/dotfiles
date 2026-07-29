@@ -63,9 +63,17 @@ run = "plugin rsync"
 desc = "Copy files using rsync"
 
 ########################################
-# rsync
+# lazygit
 ########################################
 [[mgr.prepend_keymap]]
 on = ["g", "i"]
 run = "plugin lazygit"
 desc = "run lazygit"
+
+########################################
+# tab
+########################################
+[[mgr.prepend_keymap]]
+on = ["<c-w>"]
+run = "close"
+desc = "close tab"
