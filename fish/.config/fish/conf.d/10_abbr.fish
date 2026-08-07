@@ -1,6 +1,6 @@
-abbr -a --global ls 'exa -lh --icons'
-abbr -a --global ll 'exa -lh --icons'
-abbr -a --global la 'exa -lah --icons'
+abbr -a --global ls 'exa -lh --icons auto'
+abbr -a --global ll 'exa -lh --icons auto'
+abbr -a --global la 'exa -lah --icons auto'
 abbr -a --global tailf 'tail -f'
 abbr -a --global go2code 'cd $CODE_HOME'
 abbr -a --global lg lazygit
