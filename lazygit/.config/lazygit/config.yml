@@ -7,9 +7,9 @@ gui:
 os:
   editCommand: "nvim"
 git:
-  pagers:
+  diffRenderers:
     - colorArg: never
-      pager: ydiff -p cat -s --wrap --width={{columnWidth}}
+      command: ydiff -p cat -s --wrap --width={{columnWidth}}
 customCommands:
   #- key: "<c-p>"
   #context: "global"

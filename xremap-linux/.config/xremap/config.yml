@@ -1,0 +1,10 @@
+keymap:
+  - name: chrome-style-tab-switch
+    # application:
+    #   only:
+    #     - /google-chrome/
+    remap:
+      SUPER-SHIFT-LEFTBRACE:
+        - CTRL-SHIFT-TAB
+      SUPER-SHIFT-RIGHTBRACE:
+        - CTRL-TAB
