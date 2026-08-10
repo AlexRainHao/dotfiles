@@ -1,0 +1,22 @@
+{
+  "network": {
+    "format-wifi": "{icon} {essid}",
+    "format-ethernet": "",
+    "format-linked": "󱘖",
+    "format-disconnected": "󰤣",
+    "format-disabled": "󰤮",
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "tooltip-format-disconnected": "No Connection",
+    "tooltip-format-disabled": "Wi-Fi is OFF",
+    "tooltip-format-wifi": "  {ifname}/{gwaddr} ({signalStrength}%)\n\n󰐻  Freq: {frequency}GHz\n  {bandwidthDownBytes}   {bandwidthUpBytes}",
+    "tooltip-format-ethernet": "󰈀  {ifname}/{gwaddr} (Connected)\n  {bandwidthDownBytes}   {bandwidthUpBytes}",
+    "tooltip-format-linked": "󱘖 {ifname}: No IP Address",
+    "on-click": "nm-applet --indicator"
+  }
+}
