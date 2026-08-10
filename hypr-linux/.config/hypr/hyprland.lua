@@ -278,12 +278,14 @@ hl.device({
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 local secondMod = "SUPER + SHIFT"
+local thirdMod = "SUPER + CTRL"
+local forthMod = "SUPER + ALT"
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 
-hl.bind(secondMod .. " + Q", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(thirdMod .. " + Q", hl.dsp.exec_cmd("hyprlock"))
 
 -- closeWindowBind:set_enabled(false)
 hl.bind(secondMod .. " + M",
@@ -335,7 +337,7 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Clipboard
 -- hl.bind(secondMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 -p 'Search Clipboard' | cliphist decode | wl-copy"))
-hl.bind(mainMod .. " + ALT" .. " + V", hl.dsp.exec_cmd("clipse-gui"))
+hl.bind(forthMod .. " + C", hl.dsp.exec_cmd("clipse-gui"))
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
