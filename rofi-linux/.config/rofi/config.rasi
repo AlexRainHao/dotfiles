@@ -1,4 +1,4 @@
-@theme "/home/yyh/.local/share/rofi/themes/squared-everforest.rasi"
+@theme "./themes/squared-everforest.rasi"
 
 configuration {
 /*	modes: "window,drun,run,ssh";*/
