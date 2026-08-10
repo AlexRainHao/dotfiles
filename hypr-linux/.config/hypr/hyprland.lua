@@ -335,7 +335,7 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Clipboard
 -- hl.bind(secondMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 -p 'Search Clipboard' | cliphist decode | wl-copy"))
-hl.bind(secondMod .. " + V", hl.dsp.exec_cmd("clipse-gui"))
+hl.bind(mainMod .. " + ALT" .. " + V", hl.dsp.exec_cmd("clipse-gui"))
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
