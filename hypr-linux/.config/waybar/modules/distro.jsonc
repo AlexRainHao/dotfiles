@@ -35,7 +35,12 @@
   },
   "custom/browser": {
     "format": "󰊯",
-    "on-click": "google-chrome-stable",
+    "on-click": "google-chrome",
+    "tooltip": false
+  },
+  "custom/wechat": {
+    "format": "󰘑",
+    "on-click": "wechat",
     "tooltip": false
   }
 }

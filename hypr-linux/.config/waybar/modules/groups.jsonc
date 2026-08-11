@@ -37,7 +37,22 @@
       "transition-left-to-right": false
     },
     "modules": [
-      "pulseaudio"
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  },
+  "group/connection": {
+    "orientation": "horizontal",
+    "modules": [
+      "network",
+      "bluetooth"
+    ]
+  },
+  "group/tray-group": {
+    "orientation": "horizontal",
+    "modules": [
+      "tray",
+      "custom/notification"
     ]
   }
 }

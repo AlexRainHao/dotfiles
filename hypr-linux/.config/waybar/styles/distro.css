@@ -1,0 +1,41 @@
+@import "colors.css";
+
+#custom-distro {
+  color: @primary;
+  padding: 6px 15px 6px 10px;
+}
+
+#custom-terminal {
+  color: #a6e3a1;
+  padding: 0px 10px;
+}
+
+#custom-code {
+  color: #89b4fa;
+  padding: 0px 10px;
+}
+
+#custom-office {
+  color: #ff6f4c;
+  padding: 0px 10px;
+}
+
+#custom-obsidian {
+  color: #cba6f7;
+  padding: 0px 10px;
+}
+
+#custom-files {
+  color: #f9e2af;
+  padding: 0px 10px 0px 8px;
+}
+
+#custom-spotify {
+  color: #1db954;
+  padding: 0px 10px;
+}
+
+#custom-browser {
+  color: #fab387;
+  padding: 0px 15px 0px 10px;
+}

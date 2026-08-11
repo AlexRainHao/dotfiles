@@ -50,7 +50,7 @@ local scripts     = "rofi -show run"
 --
 hl.on("hyprland.start", function()
   hl.exec_cmd(terminal)
-  hl.exec_cmd("mako")
+  hl.exec_cmd("swaync")
   hl.exec_cmd("/usr/lib/hyprpolkitagent/hyprpolkitagent")
   hl.exec_cmd("wl-clip-persist --clipboard regular")
   hl.exec_cmd("clipse -listen")
@@ -314,6 +314,12 @@ hl.bind(secondMod .. " + left", hl.dsp.window.resize({ x = -30, y = 0, relative 
 hl.bind(secondMod .. " + right", hl.dsp.window.resize({ x = 30, y = 0, relative = true }))
 hl.bind(secondMod .. " + down", hl.dsp.window.resize({ x = 0, y = 20, relative = true }))
 hl.bind(secondMod .. " + up", hl.dsp.window.resize({ x = 0, y = -20, relative = true }))
+
+-- Default springs
+-- screenshot
+hl.bind(forthMod .. " + 3", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
+hl.bind(forthMod .. " + 4", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only"))
+hl.bind(forthMod .. " + 5", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]

@@ -1,0 +1,31 @@
+@import "colors.css";
+
+#system,
+#storage {
+  margin: 4px 5px;
+  padding: 6px 6px;
+  background-color: @surface_container;
+  border-radius: 20px;
+  color: @secondary_fixed_dim;
+}
+
+#cpu,
+#disk,
+#memory,
+#temperature {
+  margin-right: 2px;
+  padding: 0 8px;
+}
+
+#cpu.warning,
+#disk.warning,
+#memory.warning {
+  color: #f9e2af;
+}
+
+#cpu.critical,
+#disk.critical,
+#memory.critical,
+#temperature.critical {
+  color: #f38ba8;
+}

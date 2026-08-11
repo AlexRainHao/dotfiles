@@ -1,0 +1,12 @@
+@import "colors.css";
+
+#tray-group,
+#distro-group {
+  margin: 4px 5px;
+  background-color: @surface_container;
+  border-radius: 20px;
+}
+
+#distro-group {
+  color: @primary;
+}

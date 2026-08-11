@@ -2,7 +2,7 @@
   "cpu": {
     "tooltip": false,
     "internval": 10,
-    "format": " {usage}%",
+    "format": "  {usage}%",
     "format-alt": "",
     "states": {
       "warning": 80,
@@ -14,8 +14,8 @@
     "interval": 1800,
     "path": "/",
     "unit": "G1B",
-    "format": "󱙋 {used}/{total}",
-    "format-alt": "󱙋",
+    "format": "󱙋  {percentage_used}%",
+    "format-alt": "󱙋  {used} / {total}",
     "states": {
       "warning": 80,
       "critical": 90
@@ -24,8 +24,8 @@
   "memory": {
     "tooltip": false,
     "interval": 10,
-    "format": " {used}",
-    "format-alt": "",
+    "format": "  {percentage}%",
+    "format-alt": "  {used}",
     "states": {
       "warning": 80,
       "critical": 90
@@ -34,11 +34,10 @@
   "temperature": {
     "tooltip": false,
     "interval": 10,
-    "thermal-zone": 8,
     "critical-threshold": 80,
-    "format": "{icon} {temperatureC}°C",
+    "format": "{icon}  {temperatureC}°C",
     "format-alt": "{icon}",
-    "format-critical": "󱗗 {temperatureC}°C",
+    "format-critical": "󱗗  {temperatureC}°C",
     "format-icons": [
       "",
       "",
