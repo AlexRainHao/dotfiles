@@ -1,5 +1,5 @@
 {
-  "group/distro-group": {
+  "group/distros": {
     "orientation": "horizontal",
     "drawer": {
       "transition-duration": 650,
@@ -16,21 +16,31 @@
       "custom/browser"
     ]
   },
-  "group/storage": {
+  "group/storages": {
     "orientation": "horizontal",
     "modules": [
       "disk",
       "memory"
     ]
   },
-  "group/system": {
+  "group/systems": {
     "orientation": "horizontal",
     "modules": [
       "cpu",
       "temperature"
     ]
   },
-  "group/audio": {
+  "group/songs": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/song-title",
+      "custom/song",
+      "custom/song-post",
+      "custom/song-status",
+      "custom/cava"
+    ]
+  },
+  "group/audios": {
     "orientation": "horizontal",
     "drawer": {
       "transition-duration": 650,
@@ -41,14 +51,14 @@
       "pulseaudio/slider"
     ]
   },
-  "group/connection": {
+  "group/connections": {
     "orientation": "horizontal",
     "modules": [
       "network",
       "bluetooth"
     ]
   },
-  "group/tray-group": {
+  "group/trays": {
     "orientation": "horizontal",
     "modules": [
       "tray",

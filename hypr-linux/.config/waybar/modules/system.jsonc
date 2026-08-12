@@ -12,10 +12,14 @@
   "disk": {
     "tooltip": false,
     "interval": 1800,
-    "path": "/",
-    "unit": "G1B",
+    "paths": [
+      "/",
+      "/home"
+    ],
+    "unit": "GiB",
     "format": "󱙋  {percentage_used}%",
-    "format-alt": "󱙋  {used} / {total}",
+    "format-alt": "󱙋  {used} / {total} ",
+    "separator": "  ",
     "states": {
       "warning": 80,
       "critical": 90
@@ -25,7 +29,7 @@
     "tooltip": false,
     "interval": 10,
     "format": "  {percentage}%",
-    "format-alt": "  {used}",
+    "format-alt": "  {used}GiB",
     "states": {
       "warning": 80,
       "critical": 90

@@ -1,12 +1,30 @@
 @import "colors.css";
 
-#tray-group,
-#distro-group {
+#songs,
+#trays,
+#distros,
+#audios,
+#systems,
+#storages,
+#connections {
   margin: 4px 5px;
+  padding: 0px 6px;
   background-color: @surface_container;
   border-radius: 20px;
 }
 
-#distro-group {
+#distros {
   color: @primary;
+}
+
+#audios,
+#systems,
+#storages,
+#connections {
+  color: @secondary_fixed_dim;
+}
+
+#songs {
+  padding: 8px;
+
 }

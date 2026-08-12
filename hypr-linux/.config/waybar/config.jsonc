@@ -14,18 +14,19 @@
     "./modules/workspace.jsonc"
   ],
   "modules-left": [
-    "group/distro-group",
-    "group/storage",
-    "group/system"
+    "group/distros",
+    "group/storages",
+    "group/systems",
+    "group/songs"
   ],
   "modules-center": [
     "hyprland/workspaces"
   ],
   "modules-right": [
     "idle_inhibitor",
-    "group/audio",
-    "group/connection",
+    "group/audios",
+    "group/connections",
     "clock",
-    "group/tray-group"
+    "group/trays"
   ]
 }

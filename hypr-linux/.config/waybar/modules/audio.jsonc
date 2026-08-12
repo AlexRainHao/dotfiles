@@ -20,5 +20,25 @@
     "min": 0,
     "max": 100,
     "orientation": "horizontal"
+  },
+  "custom/cava": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/cava.sh"
+  },
+  "custom/song": {
+    "exec": "~/.config/waybar/scripts/netease-music.sh lyc",
+    "interval": 1
+  },
+  "custom/song-title": {
+    "exec": "~/.config/waybar/scripts/netease-music.sh title",
+    "interval": 1
+  },
+  "custom/song-post": {
+    "exec": "~/.config/waybar/scripts/netease-music.sh process",
+    "interval": 1
+  },
+  "custom/song-status": {
+    "exec": "~/.config/waybar/scripts/netease-music.sh icons",
+    "interval": 1
   }
 }

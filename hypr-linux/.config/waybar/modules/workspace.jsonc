@@ -1,7 +1,8 @@
 {
   "hyprland/workspaces": {
     "format": "{icon}  {windows}",
-    "on-click": "activate",
+    // "on-click": "activate",
+    "move-to-monitor": true,
     "persistent-workspaces": {
       "*": 5
     },
@@ -37,13 +38,11 @@
       "qt6ct": "󰒓"
     },
     "format-icons": {
-      "active": "󰮯",
-      "special": "󱁂",
-      "default": "󰊠",
-      "urgent": "󰧵",
-      "empty": ""
+      "active": "",
+      "default": ""
     },
     "show-special": true,
+    "active-only": false,
     "all-outputs": true
   }
 }
