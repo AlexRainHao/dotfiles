@@ -33,7 +33,7 @@
   background-color: @primary;
 }
 
-#custom-song {
+#custom-song-lyc {
   color: @on_tertiary_container;
   margin: 0 8px;
 }
@@ -46,7 +46,7 @@
   border-radius: 4px;
 }
 
-#custom-song-post {
+#custom-song-process {
   color: @on_surface;
 }
 

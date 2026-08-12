@@ -34,8 +34,8 @@
     "orientation": "horizontal",
     "modules": [
       "custom/song-title",
-      "custom/song",
-      "custom/song-post",
+      "custom/song-lyc",
+      "custom/song-process",
       "custom/song-status",
       "custom/cava"
     ]

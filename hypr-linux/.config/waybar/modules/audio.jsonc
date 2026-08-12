@@ -25,7 +25,7 @@
     "format": "{}",
     "exec": "~/.config/waybar/scripts/cava.sh"
   },
-  "custom/song": {
+  "custom/song-lyc": {
     "exec": "~/.config/waybar/scripts/netease-music.sh lyc",
     "interval": 1
   },
@@ -33,7 +33,7 @@
     "exec": "~/.config/waybar/scripts/netease-music.sh title",
     "interval": 1
   },
-  "custom/song-post": {
+  "custom/song-process": {
     "exec": "~/.config/waybar/scripts/netease-music.sh process",
     "interval": 1
   },
