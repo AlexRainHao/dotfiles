@@ -1,0 +1,32 @@
+@import "colors.css";
+
+#tray {
+  padding: 6px 10px;
+}
+
+#tray>.passive,
+#tray>.active,
+#tray>.needs-attention {
+  -gtk-icon-effect: none;
+}
+
+#custom-notification {
+  padding: 6px 14px 6px 10px;
+  color: @primary;
+}
+
+#custom-notification.inhibited-none,
+#custom-notification.dnd-none {
+  color: #a6e3a1;
+}
+
+#custom-notification.notification,
+#custom-notification.dnd-notification,
+#custom-notification.inhibited-notification {
+  color: #f9e2af;
+}
+
+#custom-notification.dnd-inhibited-none,
+#custom-notification.dnd-inhibited-notification {
+  color: #f38ba8;
+}

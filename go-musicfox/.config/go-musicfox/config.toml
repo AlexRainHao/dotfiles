@@ -42,7 +42,7 @@ locale = "zh"
 # 调高 main.frameRate 更丝滑
 [main.visualizer]
 # 是否显示实时频谱
-enable = false
+enable = true
 # 频谱最大行数（0 表示不限制；会随可用空间自动缩小）
 maxHeight = 8
 # 频谱渲染样式：bar(柱状图), line(折线图), mirror_bar(镜像柱状图), dot(散点图),
@@ -147,7 +147,7 @@ renderMode = "smooth"
 # 封面图显示设置（需要支持Kitty图形协议的终端，如Kitty、WezTerm、Ghostty等）
 [main.lyric.cover]
 # 是否显示封面图
-show = false
+show = true
 # 封面图宽度占窗口宽度的比例（取值范围 0.1-0.8，默认 0.3）
 widthRatio = 0.1
 # 封面图圆角半径百分比（取值范围 0-100，默认 8 即 8%，0 则关闭，越大越圆）
@@ -232,7 +232,7 @@ neteaseCookie = ""
 [theme]
 # 活跃主题名称（对应主题文件中的 name 字段，默认 "Default"）
 # 主题文件存放于 embed/themes/（内置）和 ~/.config/go-musicfox/themes/（用户自定义）
-activeTheme = "Default"
+activeTheme = "Gruvbox"
 # 是否在界面顶部显示标题
 showTitle = true
 # 菜单加载时显示的提示文字
@@ -315,7 +315,7 @@ maxPlayErrCount = 3
 songLevel = "higher"
 # 是否获取并显示歌单下的所有歌曲，默认前 1000 首
 # 开启后可能会占用更多内存（大量歌曲数据）和带宽（会同时发送多个请求获取歌单下歌曲数据）
-showAllSongsOfPlaylist = false
+showAllSongsOfPlaylist = true
 # Ctrl + 鼠标滚轮单次滚动调节的音量值 (取值范围 1-20)
 mouseVolumeStep = 1
 
@@ -373,10 +373,10 @@ mode = "last"
 # UNM (Unlock NetEase Music) 相关配置，用于解锁灰色或无版权歌曲
 [unm]
 # 是否启用 UNM 功能
-enable = false
+enable = true
 # 音源匹配来源，可配置多个，用逗号分隔
 # 可选: "kuwo", "kugou", "migu", "qq"
-sources = ["kuwo"]
+sources = ["qq", "migu", "kugou", "kuwo"]
 # UNM搜索其他平台限制 0-3
 searchLimit = 0
 # 解除会员限制
@@ -449,6 +449,7 @@ intelligence = ["P"]
 clearSongCache = ["u", "U"]
 logout = ["W"]
 curPlaylist = ["c", "C"]
+switchTheme = ["ctrl+t"]
 
 
 # 自定义分享模板

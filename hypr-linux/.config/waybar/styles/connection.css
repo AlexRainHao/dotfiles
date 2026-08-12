@@ -1,0 +1,14 @@
+@import "colors.css";
+
+#network {
+  padding: 0px 10px 0px 4px;
+}
+
+#network.disabled {
+  color: #f38ba8;
+}
+
+#bluetooth {
+  margin-right: 2px;
+  padding: 0 8px;
+}

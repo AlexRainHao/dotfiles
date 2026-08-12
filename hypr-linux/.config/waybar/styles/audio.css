@@ -1,0 +1,56 @@
+@import "colors.css";
+
+#pulseaudio {
+  margin-right: 12px;
+  margin-left: 8px;
+}
+
+#pulseaudio-slider {
+  margin: 4px 5px;
+  padding: 0 2px;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+#pulseaudio-slider trough {
+  min-height: 10px;
+  min-width: 80px;
+  border-radius: 10px;
+  background-color: @outline_variant;
+}
+
+#pulseaudio-slider highlight {
+  min-height: 10px;
+  border-radius: 10px;
+  background-color: @secondary_fixed_dim;
+}
+
+#pulseaudio-slider slider {
+  min-height: 12px;
+  min-width: 12px;
+  margin: -2px 0;
+  border-radius: 100%;
+  background-color: @primary;
+}
+
+#custom-song {
+  color: @on_tertiary_container;
+  margin: 0 8px;
+}
+
+#custom-song-title {
+  background-color: @primary;
+  color: @on_primary;
+  padding: 0 8px;
+  margin: 0 8px;
+  border-radius: 4px;
+}
+
+#custom-song-post {
+  color: @on_surface;
+}
+
+#custom-song-status {
+  padding: 0 8px;
+  color: #abe9b3;
+}

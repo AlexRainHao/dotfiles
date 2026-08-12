@@ -1,0 +1,22 @@
+@import "colors.css";
+
+#cpu,
+#disk,
+#memory,
+#temperature {
+  margin-right: 2px;
+  padding: 0 8px;
+}
+
+#cpu.warning,
+#disk.warning,
+#memory.warning {
+  color: #f9e2af;
+}
+
+#cpu.critical,
+#disk.critical,
+#memory.critical,
+#temperature.critical {
+  color: #f38ba8;
+}

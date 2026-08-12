@@ -1,0 +1,51 @@
+{
+  "cpu": {
+    "tooltip": false,
+    "internval": 10,
+    "format": "  {usage}%",
+    "format-alt": "",
+    "states": {
+      "warning": 80,
+      "critical": 90
+    }
+  },
+  "disk": {
+    "tooltip": false,
+    "interval": 1800,
+    "paths": [
+      "/",
+      "/home"
+    ],
+    "unit": "GiB",
+    "format": "󱙋  {percentage_used}%",
+    "format-alt": "󱙋  {used} / {total} ",
+    "separator": "  ",
+    "states": {
+      "warning": 80,
+      "critical": 90
+    }
+  },
+  "memory": {
+    "tooltip": false,
+    "interval": 10,
+    "format": "  {percentage}%",
+    "format-alt": "  {used}GiB",
+    "states": {
+      "warning": 80,
+      "critical": 90
+    }
+  },
+  "temperature": {
+    "tooltip": false,
+    "interval": 10,
+    "critical-threshold": 80,
+    "format": "{icon}  {temperatureC}°C",
+    "format-alt": "{icon}",
+    "format-critical": "󱗗  {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  }
+}

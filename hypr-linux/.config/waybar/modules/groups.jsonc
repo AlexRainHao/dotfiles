@@ -1,0 +1,68 @@
+{
+  "group/distros": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 650,
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "custom/distro",
+      "custom/terminal",
+      "custom/code",
+      "custom/obsidian",
+      "custom/office",
+      "custom/files",
+      "custom/spotify",
+      "custom/browser"
+    ]
+  },
+  "group/storages": {
+    "orientation": "horizontal",
+    "modules": [
+      "disk",
+      "memory"
+    ]
+  },
+  "group/systems": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "temperature"
+    ]
+  },
+  "group/songs": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/song-title",
+      "custom/song",
+      "custom/song-post",
+      "custom/song-status",
+      "custom/cava"
+    ]
+  },
+  "group/audios": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 650,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ]
+  },
+  "group/connections": {
+    "orientation": "horizontal",
+    "modules": [
+      "network",
+      "bluetooth"
+    ]
+  },
+  "group/trays": {
+    "orientation": "horizontal",
+    "modules": [
+      "tray",
+      "custom/notification"
+    ]
+  }
+}

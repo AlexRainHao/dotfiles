@@ -1,0 +1,30 @@
+@import "colors.css";
+
+#songs,
+#trays,
+#distros,
+#audios,
+#systems,
+#storages,
+#connections {
+  margin: 4px 5px;
+  padding: 0px 6px;
+  background-color: @surface_container;
+  border-radius: 20px;
+}
+
+#distros {
+  color: @primary;
+}
+
+#audios,
+#systems,
+#storages,
+#connections {
+  color: @secondary_fixed_dim;
+}
+
+#songs {
+  padding: 8px;
+
+}
