@@ -60,6 +60,7 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("hyprpaper")
   hl.exec_cmd("xremap ~/.config/xremap/config.yml")
   hl.exec_cmd("fcitx5 --replace -d")
+  hl.exec_cmd("dotoold")
 end)
 
 
@@ -340,6 +341,10 @@ hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+-- Scroll mouse
+hl.bind(forthMod .. " + J", hl.dsp.exec_cmd("echo 'wheel -5' | dotoolc"))
+hl.bind(forthMod .. " + K", hl.dsp.exec_cmd("echo 'wheel 5' | dotoolc"))
 
 -- Clipboard
 -- hl.bind(secondMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 -p 'Search Clipboard' | cliphist decode | wl-copy"))
