@@ -8,3 +8,8 @@ keymap:
         - CTRL-SHIFT-TAB
       SUPER-SHIFT-RIGHTBRACE:
         - CTRL-TAB
+        
+modmap:
+  - name: capslock-to-ctrl
+    remap:
+      CapsLock: Control_L

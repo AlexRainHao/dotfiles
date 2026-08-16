@@ -37,7 +37,7 @@ function preinstall --description 'Initialize machine prerequisites'
 end
 
 function __preinstall_tpm --description 'Install the tmux plugin manager'
-    set -l plugins_dir "$HOME/.tmux/plugins"
+    set -l plugins_dir "$HOME/.config/tmux/plugins"
     set -l target "$plugins_dir/tpm"
 
     if test -e "$target/.git"
