@@ -62,7 +62,7 @@ return {
         files = {
           ['enter'] = fzf.actions.file_edit_or_qf,
           ['ctrl-q'] = fzf.actions.file_sel_to_qf,
-          ['ctrl-s'] = fzf.actions.file_split,
+          ['ctrl-x'] = fzf.actions.file_split,
           ['ctrl-v'] = fzf.actions.file_vsplit,
           ['ctrl-t'] = fzf.actions.file_tabedit,
         },

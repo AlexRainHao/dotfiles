@@ -27,15 +27,15 @@ local mappings = {
   { from = '<M-h>',     to = ':vertical resize -5<CR>' },
   { from = '<M-l>',     to = ':vertical resize +5<CR>' },
   {
-    from = '<leader>\\',
+    from = '<leader>v',
     to = ':set nosplitright<CR>:vsplit<CR>:set splitright<CR>',
   },
   {
-    from = '<leader>;',
+    from = '<leader>x',
     to = ':set nosplitbelow<CR>:split<CR>:set splitbelow<CR>',
   },
-  { from = '<leader>v', to = '<C-w>b<C-w>K' },
-  { from = '<leader>h', to = '<C-w>b<C-w>H' },
+  { from = '<leader>X', to = '<C-w>b<C-w>K' },
+  { from = '<leader>V', to = '<C-w>b<C-w>H' },
 
   { from = '<leader>q', to = '<C-w>j:q<CR>' },
 
