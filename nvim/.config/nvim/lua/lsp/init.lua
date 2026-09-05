@@ -82,17 +82,36 @@ require('lsp.servers.go').setup()
 require('lsp.servers.rust').setup()
 require('lsp.servers.flutter').setup()
 
-require('mason').setup()
-require('mason-lspconfig').setup()
-
-require('null-ls').setup()
-
+local format_on_save_group = vim.api.nvim_create_augroup(
+  'LspFormatOnSave',
+  { clear = true }
+)
 vim.api.nvim_create_autocmd('BufWritePre', {
+  group = format_on_save_group,
   pattern = '*',
-  callback = function()
-    local lineno = vim.api.nvim_win_get_cursor(0)
-    vim.lsp.buf.format({ async = true })
-    pcall(vim.api.nvim_win_set_cursor, 0, lineno)
+  callback = function(event)
+    if not vim.bo[event.buf].modifiable or vim.bo[event.buf].buftype ~= '' then
+      return
+    end
+
+    local filetype = vim.bo[event.buf].filetype
+    local formatter_name = filetype == 'go' and 'null-ls' or nil
+    local clients = vim.lsp.get_clients({
+      bufnr = event.buf,
+      method = 'textDocument/formatting',
+      name = formatter_name,
+    })
+
+    if #clients == 0 then
+      return
+    end
+
+    vim.lsp.buf.format({
+      bufnr = event.buf,
+      async = false,
+      timeout_ms = 3000,
+      name = formatter_name,
+    })
   end,
 })
 

@@ -157,7 +157,6 @@ M.config = {
           'markdownlint',
           'golines',
         },
-        automatic_installation = true
       })
     end
   },
@@ -168,7 +167,12 @@ M.config = {
       local null_ls = require('null-ls')
       null_ls.setup({
         sources = {
-          null_ls.builtins.formatting.golines,
+          null_ls.builtins.formatting.golines.with({
+            extra_args = {
+              '--max-len=80',
+              '--base-formatter=goimports',
+            },
+          }),
           null_ls.builtins.formatting.prettierd.with({
             condition = function(utils)
               return utils.root_has_file({

@@ -9,23 +9,10 @@ return {
   config = function()
     require('go').setup({
       gofmt = 'golines',
-      max_line_len = 80,
-    })
-
-    vim.api.nvim_create_autocmd('BufWritePre', {
-      pattern = '*.go',
-      callback = function()
-        require('go.format').goimport()
-      end,
-      group = vim.api.nvim_create_augroup('GoImport', {}),
-    })
-
-    vim.api.nvim_create_autocmd('BufWritePre', {
-      pattern = '*.go',
-      callback = function()
-        require('go.format').gofmt()
-      end,
-      group = vim.api.nvim_create_augroup('GoFormat', {}),
+      gofmt_args = {
+        '--max-len=80',
+        '--base-formatter=goimports',
+      },
     })
 
     local commander = require('commander')
