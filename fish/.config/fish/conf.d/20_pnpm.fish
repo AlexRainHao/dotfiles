@@ -12,3 +12,5 @@ end
 if set -q PNPM_HOME
     fish_add_path --global --prepend "$PNPM_HOME/bin" "$PNPM_HOME"
 end
+
+fish_add_path --global --prepend "$HOME/.npm-global/bin"
