@@ -225,8 +225,8 @@ hl.config({
 
 hl.config({
   misc = {
-    force_default_wallpaper  = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-    disable_hyprland_logo    = false, -- If true disables the random hyprland logo / anime girl background. :(
+    force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
+    disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
   },
 })
 
@@ -243,7 +243,7 @@ hl.config({
     kb_options    = "",
     kb_rules      = "",
 
-    repeat_delay  = 25,
+    repeat_rate   = 25,
     repeat_delay  = 300,
 
     accel_profile = "flat",
@@ -343,8 +343,8 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Scroll mouse
-hl.bind(forthMod .. " + J", hl.dsp.exec_cmd("echo 'wheel -5' | dotoolc"))
-hl.bind(forthMod .. " + K", hl.dsp.exec_cmd("echo 'wheel 5' | dotoolc"))
+hl.bind(forthMod .. " + J", hl.dsp.exec_cmd("echo 'wheel -5' | dotoolc"), { repeating = true })
+hl.bind(forthMod .. " + K", hl.dsp.exec_cmd("echo 'wheel 5' | dotoolc"), { repeating = true })
 
 -- Clipboard
 -- hl.bind(secondMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 -p 'Search Clipboard' | cliphist decode | wl-copy"))
