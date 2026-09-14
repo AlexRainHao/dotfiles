@@ -35,6 +35,11 @@ local ENTER_MODE_FIRST = 0
 local ENTER_MODE_CACHE = 1
 local ENTER_MODE_CACHE_OR_FIRST = 2
 
+-- `ya.emit()` replaced `ya.mgr_emit()` in v25.5.28. Prefer the current API
+-- for v25.5.28+ (including v26+), but retain the fallback for older Yazi
+-- installations that may load this plugin without enforcing `@since`.
+local emit = ya.emit or ya.mgr_emit
+
 -----------------------------------------------
 ----------------- R E N D E R -----------------
 -----------------------------------------------
@@ -288,8 +293,8 @@ return {
 
 		if cmd == "g" then
 			if direction == "g" then
-				ya.mgr_emit("arrow", { "top" })
-				ya.mgr_emit("arrow", { lines - 1 })
+				emit("arrow", { "top" })
+				emit("arrow", { lines - 1 })
 				render_clear()
 				return
 			elseif direction == "j" then
@@ -297,7 +302,7 @@ return {
 			elseif direction == "k" then
 				cmd = "k"
 			elseif direction == "t" then
-				ya.mgr_emit("tab_switch", { lines - 1 })
+				emit("tab_switch", { lines - 1 })
 				render_clear()
 				return
 			else
@@ -308,66 +313,66 @@ return {
 		end
 
 		if cmd == "j" then
-			ya.mgr_emit("arrow", { lines })
+			emit("arrow", { lines })
 		elseif cmd == "k" then
-			ya.mgr_emit("arrow", { -lines })
+			emit("arrow", { -lines })
 		elseif cmd == "h" then
 			for _ = 1, lines do
-				ya.mgr_emit("leave", {})
+				emit("leave", {})
 			end
 		elseif cmd == "l" then
 			for _ = 1, lines do
-				ya.mgr_emit("enter", {})
+				emit("enter", {})
 				local file_idx = get_cache_or_first_dir()
 				if file_idx then
-					ya.mgr_emit("arrow", { "top" })
-					ya.mgr_emit("arrow", { file_idx })
+					emit("arrow", { "top" })
+					emit("arrow", { file_idx })
 				end
 			end
 		elseif is_tab_command(cmd) then
 			if cmd == "t" then
 				for _ = 1, lines do
-					ya.mgr_emit("tab_create", {})
+					emit("tab_create", {})
 				end
 			elseif cmd == "H" then
-				ya.mgr_emit("tab_switch", { -lines, relative = true })
+				emit("tab_switch", { -lines, relative = true })
 			elseif cmd == "L" then
-				ya.mgr_emit("tab_switch", { lines, relative = true })
+				emit("tab_switch", { lines, relative = true })
 			elseif cmd == "w" then
-				ya.mgr_emit("tab_close", { lines - 1 })
+				emit("tab_close", { lines - 1 })
 			elseif cmd == "W" then
 				local curr_tab = get_active_tab()
 				local del_tab = curr_tab + lines - 1
 				for _ = curr_tab, del_tab do
-					ya.mgr_emit("tab_close", { curr_tab - 1 })
+					emit("tab_close", { curr_tab - 1 })
 				end
-				ya.mgr_emit("tab_switch", { curr_tab - 1 })
+				emit("tab_switch", { curr_tab - 1 })
 			elseif cmd == "<" then
-				ya.mgr_emit("tab_swap", { -lines })
+				emit("tab_swap", { -lines })
 			elseif cmd == ">" then
-				ya.mgr_emit("tab_swap", { lines })
+				emit("tab_swap", { lines })
 			elseif cmd == "~" then
 				local jump = lines - get_active_tab()
-				ya.mgr_emit("tab_swap", { jump })
+				emit("tab_swap", { jump })
 			end
 		else
-			ya.mgr_emit("visual_mode", {})
+			emit("visual_mode", {})
 			-- invert direction when user specifies it
 			if direction == "k" then
-				ya.mgr_emit("arrow", { -lines })
+				emit("arrow", { -lines })
 			elseif direction == "j" then
-				ya.mgr_emit("arrow", { lines })
+				emit("arrow", { lines })
 			else
-				ya.mgr_emit("arrow", { lines - 1 })
+				emit("arrow", { lines - 1 })
 			end
-			ya.mgr_emit("escape", {})
+			emit("escape", {})
 
 			if cmd == "d" then
-				ya.mgr_emit("remove", {})
+				emit("remove", {})
 			elseif cmd == "y" then
-				ya.mgr_emit("yank", {})
+				emit("yank", {})
 			elseif cmd == "x" then
-				ya.mgr_emit("yank", { cut = true })
+				emit("yank", { cut = true })
 			end
 		end
 
