@@ -295,6 +295,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(secondMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(launcher))
 hl.bind(secondMod .. " + Space", hl.dsp.exec_cmd(scripts))
+hl.bind(secondMod .. " + P", hl.dsp.exec_cmd("~/.config/rofi/applets/bin/powermenu.sh"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(secondMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
