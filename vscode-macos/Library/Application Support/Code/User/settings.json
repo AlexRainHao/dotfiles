@@ -340,7 +340,7 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "Gruvbox Dark Soft",
   "editor.linkedEditing": true,
   "element-helper.version": "2.5",
   "git.ignoreLegacyWarning": true,

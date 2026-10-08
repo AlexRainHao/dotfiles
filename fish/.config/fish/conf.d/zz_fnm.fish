@@ -1,3 +1,21 @@
+# Configure pnpm and global command paths before selecting Node with fnm.
+switch (uname)
+    case Darwin
+        set -gx PNPM_HOME "$HOME/Library/pnpm"
+    case Linux
+        if set -q XDG_DATA_HOME
+            set -gx PNPM_HOME "$XDG_DATA_HOME/pnpm"
+        else
+            set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+        end
+end
+
+if set -q PNPM_HOME
+    fish_add_path --global --prepend "$PNPM_HOME/bin" "$PNPM_HOME"
+end
+
+fish_add_path --global --prepend "$HOME/.npm-global/bin"
+
 set -l fnm_path
 set -l os_name (uname -s)
 
@@ -46,6 +64,12 @@ if set -q fnm_path[1]
     if not contains -- "$FNM_PATH" $PATH
         set -gx PATH "$FNM_PATH" $PATH
     end
+end
 
+# Initialize fnm after the other conf.d files have configured PATH.
+if status is-interactive; and set -q FNM_PATH
     command "$FNM_PATH/fnm" env --shell fish | source
+    if test $pipestatus[1] -eq 0
+        command "$FNM_PATH/fnm" use default
+    end
 end
