@@ -1,0 +1,2 @@
+# One crates.io package per line; versions captured by sync.sh --archive.
+grip-grab@0.6.7

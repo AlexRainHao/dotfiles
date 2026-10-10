@@ -5,7 +5,7 @@ function M.setup()
   vim.lsp.config('rust_analyzer', {
     cmd = { 'rust-analyzer' },
     filetypes = { 'rust' },
-    root_markeres = { 'Cargo.toml', '.git' },
+    root_markers = { 'Cargo.toml', '.git' },
     single_file_support = true,
     on_attach = function(_, bufnr)
       vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
