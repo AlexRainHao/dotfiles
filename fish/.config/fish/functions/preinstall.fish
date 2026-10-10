@@ -252,5 +252,11 @@ function __preinstall_fnm --description 'Install Fast Node Manager'
         return 1
     end
 
+    set -l completion_dir "$HOME/.config/fish/completions"
+    command mkdir -p "$completion_dir"
+    or return 1
+
+    command fnm completions --shell fish >"$completion_dir/fnm.fish"
+
     echo "preinstall: fnm is ready at "(command -s fnm)
 end
