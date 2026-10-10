@@ -1,15 +1,17 @@
-if set -q GVM_DIR
+
+  if set -q GVM_DIR
     set gvm_dir "$GVM_DIR"
-else
+  else
     set gvm_dir "$HOME/.gvm"
-end
+  end
 
-# Check for bass
-if not functions -q bass
+  # Check for bass
+  if not functions -q bass
     echo "You need to install the edc/bass plugin"
-end
+  end
 
-# Check GVM default exists
-if test -e $gvm_dir/environments/default
+  # Check GVM default exists
+  if test -e $gvm_dir/environments/default
     bass source $gvm_dir/environments/default
-end
+  end
+
