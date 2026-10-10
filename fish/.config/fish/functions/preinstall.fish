@@ -1,7 +1,7 @@
 function preinstall --description 'Initialize machine prerequisites'
     if test (count $argv) -ne 1
         echo 'Usage: preinstall <command>' >&2
-        echo 'Commands: tpm, jetbra, uv, rust, fvm, fnm' >&2
+        echo 'Commands: tpm, jetbra, uv, rust, fvm, fnm, zoxide' >&2
         return 2
     end
 
@@ -30,10 +30,52 @@ function preinstall --description 'Initialize machine prerequisites'
             __preinstall_fnm
             return $status
 
+        case zoxide
+            __preinstall_zoxide
+            return $status
+
         case '*'
             echo "preinstall: unsupported command: $argv[1]" >&2
             return 2
     end
+end
+
+function __preinstall_zoxide --description 'Install zoxide'
+    set -l zoxide_bin (command -s zoxide)
+
+    if not set -q zoxide_bin[1]; and test -x "$HOME/.local/bin/zoxide"
+        fish_add_path --global "$HOME/.local/bin"
+        set zoxide_bin "$HOME/.local/bin/zoxide"
+    end
+
+    if set -q zoxide_bin[1]
+        echo "preinstall: zoxide already exists at $zoxide_bin; skipping"
+        return 0
+    end
+
+    command curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh |
+        command sh
+    set -l install_status $pipestatus
+
+    if test $install_status[1] -ne 0
+        return $install_status[1]
+    end
+
+    if test $install_status[2] -ne 0
+        return $install_status[2]
+    end
+
+    if test -x "$HOME/.local/bin/zoxide"
+        fish_add_path --global "$HOME/.local/bin"
+    end
+
+    set zoxide_bin (command -s zoxide)
+    if not set -q zoxide_bin[1]
+        echo 'preinstall: zoxide executable was not found after installation' >&2
+        return 1
+    end
+
+    echo "preinstall: zoxide is ready at $zoxide_bin; restart Fish to enable its directory hooks"
 end
 
 function __preinstall_tpm --description 'Install the tmux plugin manager'

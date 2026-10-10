@@ -9,7 +9,7 @@ function fnm_use --description 'Change node version'
     set -l search_dir $PWD
     set -l found_file ""
 
-    if test "$FNM_VERSION_FILE_STRATEGY" = recursive
+    if test "$FNM_VERSION_FILE_STRATEGY" = "recursive"
         while test -n "$search_dir"
             for file in $_fnm_candidate_files
                 if test -f "$search_dir/$file"
@@ -22,7 +22,7 @@ function fnm_use --description 'Change node version'
                 break
             end
 
-            if test "$search_dir" = /
+            if test "$search_dir" = "/"
                 break
             end
 
@@ -43,9 +43,9 @@ function fnm_use --description 'Change node version'
         if not set -q _fnm_active_state
             or test "$_fnm_active_state[1]" != "$found_file"
             or test "$mod_time" -gt "$_fnm_active_state[2]"
-
+            
             command fnm use --silent-if-unchanged
-
+            
             # Cache state: [1]=Path [2]=Mtime
             set -g _fnm_active_state "$found_file" "$mod_time"
         end
