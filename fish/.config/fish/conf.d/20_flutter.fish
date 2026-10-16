@@ -4,3 +4,7 @@ set -gx FLUTTER_STORAGE_BASE_URL "https://storage.flutter-io.cn"
 if test -d "$HOME/fvm/bin"
     fish_add_path --global --prepend "$HOME/fvm/bin"
 end
+
+if set -q FLUTTER_HOME
+    fish_add_path --global --prepend "$FLUTTER_HOME/bin"
+end

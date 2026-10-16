@@ -28,7 +28,6 @@ return {
         'vim',
         'dockerfile',
         'json',
-        'jsonc',
         'yaml',
         'toml',
         'markdown',

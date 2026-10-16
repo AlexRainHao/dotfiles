@@ -24,6 +24,9 @@
 # Arch Linux with a system or AUR SDK package:
 # set -gx ANDROID_HOME "/opt/android-sdk"
 #
+# Flutter location
+# set -gx FLUTTER_HOME "$HOME/flutter"
+#
 # ========================================
 # optional others
 # set -gx SPECIFIC_BISON_HOME "/usr/local/opt/bison"
