@@ -8,7 +8,11 @@ keymap:
         - CTRL-SHIFT-TAB
       SUPER-SHIFT-RIGHTBRACE:
         - CTRL-TAB
-        
+
+  - name: ctrl-h-to-backspace
+    remap:
+      CTRL-h: backspace
+
 modmap:
   - name: capslock-to-ctrl
     remap:

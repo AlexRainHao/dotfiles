@@ -353,6 +353,9 @@ hl.bind(forthMod .. " + K", hl.dsp.exec_cmd("echo 'wheel 5' | dotoolc"), { repea
 -- hl.bind(secondMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 -p 'Search Clipboard' | cliphist decode | wl-copy"))
 hl.bind(forthMod .. " + C", hl.dsp.exec_cmd("clipse-gui"))
 
+-- Hyprselector
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("hyprselector"))
+
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
   { locked = true, repeating = true })

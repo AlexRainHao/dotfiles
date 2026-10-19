@@ -6,6 +6,8 @@
  * Configuration For Rofi Version: 1.7.3
  **/
 
+@theme "/home/yyh/.config/rofi/themes/default.rasi"
+
 configuration {
 	/*---------- General setting ----------*/
 	modi: "drun,run,filebrowser,window";
@@ -99,6 +101,12 @@ configuration {
       command:           "xdg-open";
     }
 
+	/*---------- Calc settings ----------*/
+    calc {
+      hint-result: "Res: ";
+      hint-welcome: "Calc";
+    }
+
 	/*---------- Other settings ----------*/
     timeout {
       action: "kb-cancel";
@@ -182,4 +190,3 @@ configuration {
 */
 }
 
-@theme "/home/yyh/.config/rofi/themes/default.rasi"
