@@ -3,6 +3,16 @@
 # set -gx CODE_HOME /tmp/code
 
 # ========================================
+# Optional zoxide runtime database and serialized background disk snapshots.
+# Enable only on machines with slow synchronous database writes. Unset/false
+# keeps the plugin's normal behavior on any operating system.
+# set -gx ZOXIDE_RUNTIME_ENABLED true
+#
+# Defaults to XDG_RUNTIME_DIR. If unavailable, specify an existing writable
+# directory on fast or memory-backed storage; a temp directory is not always RAM.
+# set -gx ZOXIDE_RUNTIME_DIR "/path/to/fast-runtime"
+#
+# ========================================
 # Java homes vary by operating system and package manager.
 # Intel macOS with Homebrew:
 # set -gx JAVA_HOME "/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home"

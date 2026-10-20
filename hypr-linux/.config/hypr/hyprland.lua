@@ -34,7 +34,7 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "kitty"
+local terminal    = "kitty --directory " .. os.getenv("HOME")
 local fileManager = "nemo"
 local launcher    = "rofi -show drun -show-icons"
 local scripts     = "rofi -show run"
